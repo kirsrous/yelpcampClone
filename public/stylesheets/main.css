@@ -1,0 +1,19 @@
+body {
+	background: linear-gradient(to right, rgb(255, 89, 0), rgb(102, 0, 255));
+}
+.thumbnail {
+	width: 100%;
+}
+.thumbnail {
+	padding: 0;
+}
+.thumbnail .caption-full {
+	padding: 9px;
+}
+.item {
+	display: inline;
+	list-style-type: none;
+}
+#delete-form {
+	display: inline;
+}
