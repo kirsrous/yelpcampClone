@@ -16,13 +16,13 @@ const commentRoutes = require("./routes/comments");
 const campgroundRoutes = require("./routes/campgrounds");
 const authRoutes = require("./routes/index");
 const connection_url =
-  "mongodb+srv://kirsrous:Tonfa18101996@campsite.ewk5w.mongodb.net/campSite?retryWrites=true&w=majority";
+  "mongodb+srv://kirsrous:Tonfa18101996@campsite.ewk5w.mongodb.net/camps?retryWrites=true&w=majority";
+
 mongoose.connect(connection_url, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
 });
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
