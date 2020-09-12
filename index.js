@@ -23,6 +23,12 @@ mongoose.connect(connection_url, {
   useCreateIndex: true,
   useUnifiedTopology: true,
 });
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"),
+    res.setHeader("Access-Control-Allow-Headers", "*"),
+    next();
+});
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
